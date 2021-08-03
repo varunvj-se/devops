@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    env: prod
+    app: db
+  namespace: nisha
+  name: nishanspod
+spec:
+  containers:
+  - image: tomcat
+    name: tomcatcontainer

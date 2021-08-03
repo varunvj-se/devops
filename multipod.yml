@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mutlipods
+  labels:
+    env: dev
+    app: web
+spec:
+  containers:
+  - env:
+    - name: DBHOST
+      value: www.devdb.com
+    - name: DBPORT
+      value: "1005"
+    image: nginx
+    name: mynginx
+  - env:
+    - name: DBHOST
+      value: www.testdb.com
+    - name: DBPORT
+      value: "2303"
+    image: tomcat
+    name: mytomcat

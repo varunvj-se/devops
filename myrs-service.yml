@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-07-19T03:40:27Z"
+  name: myrs-service
+  namespace: default
+  resourceVersion: "1667119"
+  uid: afccdff4-0f5e-4d9b-a185-6cde4b628a81
+spec:
+  clusterIP: 10.96.50.96
+  clusterIPs:
+  - 10.96.50.96
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30230
+    port: 2303
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: myapp
+  sessionAffinity: None
+  type: NodePort
+

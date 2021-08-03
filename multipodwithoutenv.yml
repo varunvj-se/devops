@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    env: dev
+  name: withoutenv
+spec:
+  containers:
+  - image: httpd
+    name: myhttpd
+  - image: ubuntu
+    name: ubuntu

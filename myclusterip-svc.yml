@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: myclusterip-svc
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3000
+      targetPort: 3000
+  selector:
+    app: myapp

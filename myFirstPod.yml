@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: my-first-prod
+   labels:
+     env: dev
+     owner: Varun
+spec:
+  containers:
+    - image: nginx
+      name: mynginx
+    - image: tomcat
+      name: mytomcat

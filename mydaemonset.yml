@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: mydaemonset
+spec:
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      name: mydspod
+      labels:
+        app: db
+    spec:
+      containers:
+        - name: cont1
+          image: nginx
+          ports:
+            -  containerPort: 80
+    
